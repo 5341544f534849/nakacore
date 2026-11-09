@@ -1,0 +1,30 @@
+# Naka Core ($NKC)
+
+> Autonomous, decentralized peer-to-peer electronic cash system.
+
+## Technical Specifications
+
+- **Ticker:** $NKC
+- **Max Supply:** 20,000,000 NKC
+- **Consensus:** Proof-of-Work (PoW)
+- **Target Block Time:** 10 minutes
+
+## Getting Started
+
+
+# Naka Core ($NKC)
+
+> Autonomous, decentralized peer-to-peer electronic cash system.
+
+Naka Core is an open-source, permissionless blockchain implementation optimized for low-latency transaction processing, deterministic UTXO validation, and strict supply control.
+
+---
+
+## Technical Specifications
+
+- **Ticker:** $NKC
+- **Max Supply:** 20,000,000 NKC
+- **Consensus:** Proof-of-Work (PoW)
+- **Target Block Time:** 10 minutes
+
+## Getting Started
