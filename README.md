@@ -13,7 +13,7 @@
 * **Language:** Modern C++
 * **Storage:** Binary-persisted blockchain ledger (`./data/chain.dat`)
 * **Networking:** P2P Node server architecture (default port: `8333`)
-* **Subsystems:** Integrated Mempool, UTXO/Block Validation, and CLI Daemon control.
+* **Dashboard:** Embedded HTTP server for real-time monitoring (port: `8080`)
 
 ## 💻 Getting Started & Compilation
 
@@ -27,8 +27,6 @@
 Once inside the `nakacored` daemon console, you can use:
 * `status` - Show node health, height, and miner balance.
 * `balance` - Check total $NKC accumulated.
-* `height` - Display current blockchain height.
-* `mempool` - View pending transactions.
 * `help` - List all available commands.
 * `exit` - Shut down the daemon safely.
 
