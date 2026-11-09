@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/morany/nakacore/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

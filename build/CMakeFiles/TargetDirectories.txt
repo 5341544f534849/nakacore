@@ -1,0 +1,3 @@
+/home/morany/nakacore/build/CMakeFiles/nakacored.dir
+/home/morany/nakacore/build/CMakeFiles/edit_cache.dir
+/home/morany/nakacore/build/CMakeFiles/rebuild_cache.dir
