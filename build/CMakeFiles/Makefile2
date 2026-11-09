@@ -85,12 +85,12 @@ clean: CMakeFiles/nakacored.dir/clean
 CMakeFiles/nakacored.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target nakacored"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=1,2,3 "Built target nakacored"
 .PHONY : CMakeFiles/nakacored.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nakacored.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/morany/nakacore/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/morany/nakacore/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nakacored.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/morany/nakacore/build/CMakeFiles 0
 .PHONY : CMakeFiles/nakacored.dir/rule
@@ -102,7 +102,7 @@ nakacored: CMakeFiles/nakacored.dir/rule
 # codegen rule for target.
 CMakeFiles/nakacored.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target nakacored"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target nakacored"
 .PHONY : CMakeFiles/nakacored.dir/codegen
 
 # clean rule for target.

@@ -5,6 +5,7 @@
 #include "wallet.h"
 #include "mempool.h"
 #include "validation.h"
+#include "pow.h"
 #include <iostream>
 #include <string>
 
@@ -35,7 +36,7 @@ public:
             std::cin >> command;
 
             if (command == "status") {
-                uint64_t totalBalance = blockchain.GetHeight() * 50;
+                uint64_t totalBalance = (blockchain.GetHeight() + 1) * 50;
                 std::cout << "\n--- Naka Core Node Dashboard ---\n";
                 std::cout << " [*] Ticker        : $NKC (Naka Core)\n";
                 std::cout << " [*] Max Supply    : 20,000,000\n";
@@ -47,9 +48,9 @@ public:
                 std::cout << "--------------------------------\n";
             }
             else if (command == "balance") {
-                uint64_t totalBalance = blockchain.GetHeight() * 50;
+                uint64_t totalBalance = (blockchain.GetHeight() + 1) * 50;
                 std::cout << "\n[+] Local Wallet Balance: " << totalBalance << " $NKC\n";
-                std::cout << "    (Mined Blocks: " << blockchain.GetHeight() << " x 50 NKC reward)\n";
+                std::cout << "    (Total blocks including genesis: " << (blockchain.GetHeight() + 1) << ")\n";
             }
             else if (command == "height") {
                 std::cout << "[+] Current Blockchain Height: " << blockchain.GetHeight() << "\n";

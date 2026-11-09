@@ -129,149 +129,53 @@ nakacored/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/build
 .PHONY : nakacored/fast
 
-blockchain.o: blockchain.cpp.o
-.PHONY : blockchain.o
+src/chain.o: src/chain.cpp.o
+.PHONY : src/chain.o
 
 # target to build an object file
-blockchain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/blockchain.cpp.o
-.PHONY : blockchain.cpp.o
+src/chain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/chain.cpp.o
+.PHONY : src/chain.cpp.o
 
-blockchain.i: blockchain.cpp.i
-.PHONY : blockchain.i
+src/chain.i: src/chain.cpp.i
+.PHONY : src/chain.i
 
 # target to preprocess a source file
-blockchain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/blockchain.cpp.i
-.PHONY : blockchain.cpp.i
+src/chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/chain.cpp.i
+.PHONY : src/chain.cpp.i
 
-blockchain.s: blockchain.cpp.s
-.PHONY : blockchain.s
+src/chain.s: src/chain.cpp.s
+.PHONY : src/chain.s
 
 # target to generate assembly for a file
-blockchain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/blockchain.cpp.s
-.PHONY : blockchain.cpp.s
+src/chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/chain.cpp.s
+.PHONY : src/chain.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-mempool.o: mempool.cpp.o
-.PHONY : mempool.o
-
-# target to build an object file
-mempool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/mempool.cpp.o
-.PHONY : mempool.cpp.o
-
-mempool.i: mempool.cpp.i
-.PHONY : mempool.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-mempool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/mempool.cpp.i
-.PHONY : mempool.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-mempool.s: mempool.cpp.s
-.PHONY : mempool.s
-
-# target to generate assembly for a file
-mempool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/mempool.cpp.s
-.PHONY : mempool.cpp.s
-
-merkle.o: merkle.cpp.o
-.PHONY : merkle.o
-
-# target to build an object file
-merkle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/merkle.cpp.o
-.PHONY : merkle.cpp.o
-
-merkle.i: merkle.cpp.i
-.PHONY : merkle.i
-
-# target to preprocess a source file
-merkle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/merkle.cpp.i
-.PHONY : merkle.cpp.i
-
-merkle.s: merkle.cpp.s
-.PHONY : merkle.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-merkle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/merkle.cpp.s
-.PHONY : merkle.cpp.s
-
-utxo.o: utxo.cpp.o
-.PHONY : utxo.o
-
-# target to build an object file
-utxo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/utxo.cpp.o
-.PHONY : utxo.cpp.o
-
-utxo.i: utxo.cpp.i
-.PHONY : utxo.i
-
-# target to preprocess a source file
-utxo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/utxo.cpp.i
-.PHONY : utxo.cpp.i
-
-utxo.s: utxo.cpp.s
-.PHONY : utxo.s
-
-# target to generate assembly for a file
-utxo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/utxo.cpp.s
-.PHONY : utxo.cpp.s
-
-wallet.o: wallet.cpp.o
-.PHONY : wallet.o
-
-# target to build an object file
-wallet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/wallet.cpp.o
-.PHONY : wallet.cpp.o
-
-wallet.i: wallet.cpp.i
-.PHONY : wallet.i
-
-# target to preprocess a source file
-wallet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/wallet.cpp.i
-.PHONY : wallet.cpp.i
-
-wallet.s: wallet.cpp.s
-.PHONY : wallet.s
-
-# target to generate assembly for a file
-wallet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/wallet.cpp.s
-.PHONY : wallet.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nakacored.dir/build.make CMakeFiles/nakacored.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -282,24 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nakacored"
-	@echo "... blockchain.o"
-	@echo "... blockchain.i"
-	@echo "... blockchain.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mempool.o"
-	@echo "... mempool.i"
-	@echo "... mempool.s"
-	@echo "... merkle.o"
-	@echo "... merkle.i"
-	@echo "... merkle.s"
-	@echo "... utxo.o"
-	@echo "... utxo.i"
-	@echo "... utxo.s"
-	@echo "... wallet.o"
-	@echo "... wallet.i"
-	@echo "... wallet.s"
+	@echo "... src/chain.o"
+	@echo "... src/chain.i"
+	@echo "... src/chain.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

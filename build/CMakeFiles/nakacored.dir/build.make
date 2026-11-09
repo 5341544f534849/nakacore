@@ -72,112 +72,49 @@ include CMakeFiles/nakacored.dir/flags.make
 CMakeFiles/nakacored.dir/codegen:
 .PHONY : CMakeFiles/nakacored.dir/codegen
 
-CMakeFiles/nakacored.dir/main.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/main.cpp.o: /home/morany/nakacore/main.cpp
-CMakeFiles/nakacored.dir/main.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nakacored.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/main.cpp.o -MF CMakeFiles/nakacored.dir/main.cpp.o.d -o CMakeFiles/nakacored.dir/main.cpp.o -c /home/morany/nakacore/main.cpp
+CMakeFiles/nakacored.dir/src/main.cpp.o: CMakeFiles/nakacored.dir/flags.make
+CMakeFiles/nakacored.dir/src/main.cpp.o: /home/morany/nakacore/src/main.cpp
+CMakeFiles/nakacored.dir/src/main.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nakacored.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/src/main.cpp.o -MF CMakeFiles/nakacored.dir/src/main.cpp.o.d -o CMakeFiles/nakacored.dir/src/main.cpp.o -c /home/morany/nakacore/src/main.cpp
 
-CMakeFiles/nakacored.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/main.cpp > CMakeFiles/nakacored.dir/main.cpp.i
+CMakeFiles/nakacored.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/src/main.cpp > CMakeFiles/nakacored.dir/src/main.cpp.i
 
-CMakeFiles/nakacored.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/main.cpp -o CMakeFiles/nakacored.dir/main.cpp.s
+CMakeFiles/nakacored.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/src/main.cpp -o CMakeFiles/nakacored.dir/src/main.cpp.s
 
-CMakeFiles/nakacored.dir/blockchain.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/blockchain.cpp.o: /home/morany/nakacore/blockchain.cpp
-CMakeFiles/nakacored.dir/blockchain.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nakacored.dir/blockchain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/blockchain.cpp.o -MF CMakeFiles/nakacored.dir/blockchain.cpp.o.d -o CMakeFiles/nakacored.dir/blockchain.cpp.o -c /home/morany/nakacore/blockchain.cpp
+CMakeFiles/nakacored.dir/src/chain.cpp.o: CMakeFiles/nakacored.dir/flags.make
+CMakeFiles/nakacored.dir/src/chain.cpp.o: /home/morany/nakacore/src/chain.cpp
+CMakeFiles/nakacored.dir/src/chain.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nakacored.dir/src/chain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/src/chain.cpp.o -MF CMakeFiles/nakacored.dir/src/chain.cpp.o.d -o CMakeFiles/nakacored.dir/src/chain.cpp.o -c /home/morany/nakacore/src/chain.cpp
 
-CMakeFiles/nakacored.dir/blockchain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/blockchain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/blockchain.cpp > CMakeFiles/nakacored.dir/blockchain.cpp.i
+CMakeFiles/nakacored.dir/src/chain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/src/chain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/src/chain.cpp > CMakeFiles/nakacored.dir/src/chain.cpp.i
 
-CMakeFiles/nakacored.dir/blockchain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/blockchain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/blockchain.cpp -o CMakeFiles/nakacored.dir/blockchain.cpp.s
-
-CMakeFiles/nakacored.dir/wallet.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/wallet.cpp.o: /home/morany/nakacore/wallet.cpp
-CMakeFiles/nakacored.dir/wallet.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/nakacored.dir/wallet.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/wallet.cpp.o -MF CMakeFiles/nakacored.dir/wallet.cpp.o.d -o CMakeFiles/nakacored.dir/wallet.cpp.o -c /home/morany/nakacore/wallet.cpp
-
-CMakeFiles/nakacored.dir/wallet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/wallet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/wallet.cpp > CMakeFiles/nakacored.dir/wallet.cpp.i
-
-CMakeFiles/nakacored.dir/wallet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/wallet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/wallet.cpp -o CMakeFiles/nakacored.dir/wallet.cpp.s
-
-CMakeFiles/nakacored.dir/utxo.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/utxo.cpp.o: /home/morany/nakacore/utxo.cpp
-CMakeFiles/nakacored.dir/utxo.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/nakacored.dir/utxo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/utxo.cpp.o -MF CMakeFiles/nakacored.dir/utxo.cpp.o.d -o CMakeFiles/nakacored.dir/utxo.cpp.o -c /home/morany/nakacore/utxo.cpp
-
-CMakeFiles/nakacored.dir/utxo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/utxo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/utxo.cpp > CMakeFiles/nakacored.dir/utxo.cpp.i
-
-CMakeFiles/nakacored.dir/utxo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/utxo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/utxo.cpp -o CMakeFiles/nakacored.dir/utxo.cpp.s
-
-CMakeFiles/nakacored.dir/mempool.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/mempool.cpp.o: /home/morany/nakacore/mempool.cpp
-CMakeFiles/nakacored.dir/mempool.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nakacored.dir/mempool.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/mempool.cpp.o -MF CMakeFiles/nakacored.dir/mempool.cpp.o.d -o CMakeFiles/nakacored.dir/mempool.cpp.o -c /home/morany/nakacore/mempool.cpp
-
-CMakeFiles/nakacored.dir/mempool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/mempool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/mempool.cpp > CMakeFiles/nakacored.dir/mempool.cpp.i
-
-CMakeFiles/nakacored.dir/mempool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/mempool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/mempool.cpp -o CMakeFiles/nakacored.dir/mempool.cpp.s
-
-CMakeFiles/nakacored.dir/merkle.cpp.o: CMakeFiles/nakacored.dir/flags.make
-CMakeFiles/nakacored.dir/merkle.cpp.o: /home/morany/nakacore/merkle.cpp
-CMakeFiles/nakacored.dir/merkle.cpp.o: CMakeFiles/nakacored.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nakacored.dir/merkle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nakacored.dir/merkle.cpp.o -MF CMakeFiles/nakacored.dir/merkle.cpp.o.d -o CMakeFiles/nakacored.dir/merkle.cpp.o -c /home/morany/nakacore/merkle.cpp
-
-CMakeFiles/nakacored.dir/merkle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/nakacored.dir/merkle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/morany/nakacore/merkle.cpp > CMakeFiles/nakacored.dir/merkle.cpp.i
-
-CMakeFiles/nakacored.dir/merkle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/merkle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/merkle.cpp -o CMakeFiles/nakacored.dir/merkle.cpp.s
+CMakeFiles/nakacored.dir/src/chain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/nakacored.dir/src/chain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/morany/nakacore/src/chain.cpp -o CMakeFiles/nakacored.dir/src/chain.cpp.s
 
 # Object files for target nakacored
 nakacored_OBJECTS = \
-"CMakeFiles/nakacored.dir/main.cpp.o" \
-"CMakeFiles/nakacored.dir/blockchain.cpp.o" \
-"CMakeFiles/nakacored.dir/wallet.cpp.o" \
-"CMakeFiles/nakacored.dir/utxo.cpp.o" \
-"CMakeFiles/nakacored.dir/mempool.cpp.o" \
-"CMakeFiles/nakacored.dir/merkle.cpp.o"
+"CMakeFiles/nakacored.dir/src/main.cpp.o" \
+"CMakeFiles/nakacored.dir/src/chain.cpp.o"
 
 # External object files for target nakacored
 nakacored_EXTERNAL_OBJECTS =
 
-nakacored: CMakeFiles/nakacored.dir/main.cpp.o
-nakacored: CMakeFiles/nakacored.dir/blockchain.cpp.o
-nakacored: CMakeFiles/nakacored.dir/wallet.cpp.o
-nakacored: CMakeFiles/nakacored.dir/utxo.cpp.o
-nakacored: CMakeFiles/nakacored.dir/mempool.cpp.o
-nakacored: CMakeFiles/nakacored.dir/merkle.cpp.o
+nakacored: CMakeFiles/nakacored.dir/src/main.cpp.o
+nakacored: CMakeFiles/nakacored.dir/src/chain.cpp.o
 nakacored: CMakeFiles/nakacored.dir/build.make
 nakacored: CMakeFiles/nakacored.dir/compiler_depend.ts
+nakacored: /usr/lib/x86_64-linux-gnu/libcrypto.so
 nakacored: CMakeFiles/nakacored.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable nakacored"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/morany/nakacore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable nakacored"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nakacored.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
