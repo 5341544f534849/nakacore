@@ -1,33 +1,28 @@
-#include "block.h"
-#include "utxo.h"
-#include "pow.h"
+#include "blockchain.h"
 #include <iostream>
 
 int main() {
     std::cout << "=== Naka Core ($NKC) Node Initializing ===\n";
 
-    // 1. Crear Bloque Génesis
-    NakaCore::Block genesis = NakaCore::CreateGenesisBlock();
-    std::cout << "[+] Genesis block created successfully.\n";
-    std::cout << "[+] Genesis Ticker: $NKC (Max Supply: 20,000,000)\n";
+    // Inicializar la cadena de bloques con el Génesis hardcodeado
+    NakaCore::Blockchain nakachain;
+    std::cout << "[+] Blockchain active. Current Height: " << nakachain.GetHeight() << "\n";
 
-    // 2. Inicializar motor UTXO y registrar la recompensa de coinbase
-    NakaCore::UTXOSet utxoSet;
-    NakaCore::OutPoint genesis_outpoint;
-    std::fill(genesis_outpoint.txid.begin(), genesis_outpoint.txid.end(), 0x00);
-    genesis_outpoint.index = 0;
+    // Simular la creación y minería de un segundo bloque en la red
+    NakaCore::Block block2;
+    block2.header.version = 1;
+    block2.header.timestamp = 1762700700;
+    block2.header.bits = 0x1d00ffff;
+    block2.header.nonce = 0;
 
-    utxoSet.AddUTXO(genesis_outpoint, genesis.vtx[0].vout[0], true, 0);
-    std::cout << "[+] UTXO Set initialized. Active UTXOs: " << utxoSet.Size() << "\n";
-
-    // 3. Ejecutar minería PoW para validar el bloque
-    std::cout << "[*] Running Proof-of-Work mining verification...\n";
-    if (NakaCore::ProofOfWork::MineBlock(genesis)) {
-        std::cout << "[SUCCESS] Block successfully mined! Valid nonce found.\n";
+    std::cout << "[*] Mining Block #1 (Proof-of-Work SHA-256)...\n";
+    if (NakaCore::ProofOfWork::MineBlock(block2)) {
+        std::cout << "[SUCCESS] Block #1 mined successfully!\n";
+        nakachain.AddBlock(block2);
     } else {
-        std::cout << "[-] Mining target not reached within iteration limits.\n";
+        std::cout << "[-] Mining failed to find valid nonce.\n";
     }
 
-    std::cout << "=== Naka Core Daemon Running Securely ===\n";
+    std::cout << "=== Naka Core Daemon Executing Securely ===\n";
     return 0;
 }
