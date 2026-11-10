@@ -4,89 +4,103 @@
 #include <iostream>
 #include <string>
 #include <thread>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
+#include <vector>
+#include <atomic>
+#include <mutex>
+
+#ifdef _WIN32
+    #include <winsock2.h>
+#else
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <unistd.h>
+#endif
 
 namespace NakaCore {
 
-class P2PNode {
+class P2PNetwork {
 private:
     int server_fd;
-    uint16_t port;
-    bool running;
+    int port;
+    std::atomic<bool> running;
     std::thread listener_thread;
+    std::mutex peers_mutex;
+    std::vector<int> connected_peers;
 
-public:
-    P2PNode(uint16_t p) : port(p), server_fd(-1), running(false) {}
-
-    ~P2PNode() {
-        Stop();
+    void HandleClient(int client_socket) {
+        char buffer[1024] = {0};
+        int valread = read(client_socket, buffer, sizeof(buffer) - 1);
+        if (valread > 0) {
+            std::string msg(buffer);
+            std::cout << "[P2P] Mensaje recibido de nodo par: " << msg << "\n";
+            
+            std::string response = "NAKA_ACK_v1.0\n";
+            send(client_socket, response.c_str(), response.length(), 0);
+        }
+        close(client_socket);
     }
 
-    bool Start() {
-        server_fd = socket(AF_INET, SOCK_STREAM, 0);
-        if (server_fd == 0) {
-            std::cout << "[-] P2P Error: Socket creation failed.\n";
-            return false;
-        }
+public:
+    P2PNetwork(int p) : port(p), running(false), server_fd(-1) {}
 
-        int opt = 1;
-        setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
-
-        sockaddr_in address{};
-        address.sin_family = AF_INET;
-        address.sin_addr.s_addr = INADDR_ANY;
-        address.sin_port = htons(port);
-
-        if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
-            std::cout << "[-] P2P Error: Bind failed on port " << port << "\n";
-            close(server_fd);
-            return false;
-        }
-
-        if (listen(server_fd, 5) < 0) {
-            std::cout << "[-] P2P Error: Listen failed.\n";
-            close(server_fd);
-            return false;
-        }
-
+    void Start() {
         running = true;
-        std::cout << "[+] P2P Server listening securely on port " << port << "\n";
+        listener_thread = std::thread([this]() {
+            server_fd = socket(AF_INET, SOCK_STREAM, 0);
+            if (server_fd < 0) {
+                std::cerr << "[-] Error creando socket P2P\n";
+                return;
+            }
 
-        // Iniciar bucle de escucha en un hilo independiente
-        listener_thread = std::thread(&P2PNode::ListenLoop, this);
-        return true;
+            int opt = 1;
+            setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+
+            sockaddr_in address{};
+            address.sin_family = AF_INET;
+            address.sin_addr.s_addr = INADDR_ANY;
+            address.sin_port = htons(port);
+
+            if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
+                std::cerr << "[-] Error en bind del puerto P2P " << port << "\n";
+                return;
+            }
+
+            if (listen(server_fd, 10) < 0) {
+                std::cerr << "[-] Error en listen P2P\n";
+                return;
+            }
+
+            std::cout << "[+] Servidor P2P descentralizado escuchando activamente en el puerto " << port << "\n";
+
+            while (running) {
+                sockaddr_in client_addr{};
+                socklen_t addrlen = sizeof(client_addr);
+                int client_socket = accept(server_fd, (struct sockaddr*)&client_addr, &addrlen);
+                if (client_socket < 0) continue;
+
+                {
+                    std::lock_guard<std::mutex> lock(peers_mutex);
+                    connected_peers.push_back(client_socket);
+                }
+
+                std::thread(&P2PNetwork::HandleClient, this, client_socket).detach();
+            }
+        });
     }
 
     void Stop() {
-        if (running) {
-            running = false;
-            if (server_fd != -1) {
-                close(server_fd);
-                server_fd = -1;
-            }
-            if (listener_thread.joinable()) {
-                listener_thread.join();
-            }
-            std::cout << "[+] P2P Server stopped.\n";
+        running = false;
+        if (server_fd >= 0) {
+            close(server_fd);
+        }
+        if (listener_thread.joinable()) {
+            listener_thread.join();
         }
     }
 
-private:
-    void ListenLoop() {
-        while (running) {
-            sockaddr_in client_addr{};
-            socklen_t addrlen = sizeof(client_addr);
-            int new_socket = accept(server_fd, (struct sockaddr*)&client_addr, &addrlen);
-            if (new_socket < 0) {
-                if (!running) break;
-                continue;
-            }
-
-            std::cout << "[+] Peer connected to Naka Core network node.\n";
-            close(new_socket);
-        }
+    size_t GetConnectedPeersCount() {
+        std::lock_guard<std::mutex> lock(peers_mutex);
+        return connected_peers.size();
     }
 };
 
